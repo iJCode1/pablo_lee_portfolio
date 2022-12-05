@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --headline2: 700 4rem/4.75rem Inter; 
     --headline3: 700 2rem/2rem Inter; 
     --headline4: 700 1.5rem/1.649999976158142rem Inter; 
-    --button: semibold 1.125rem/1.6875rem Inter; 
+    --button: 600 1.125rem/1.6875rem Inter; 
     --caption: 400 0.75rem/1.6875rem Arvo; 
     --headline5: 700 1.25rem/1.649999976158142rem Inter; 
     --body1-regular: 400 1.125rem/1.6875rem Inter; 
@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     margin: 0;
     color: var(--white);
-    font-family: var(--body1-regular);
+    font: var(--body1-regular);
   }
 `;
 
