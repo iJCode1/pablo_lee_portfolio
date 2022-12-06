@@ -14,6 +14,7 @@ const ButtonStyled = styled.button`
   transition: transform .2s;
   box-sizing: border-box;
   text-align: center;
+  inline-size: ${props => props.large ? "100%" : "100%"};
 
   :active{
     transform: scale(.9);
@@ -25,16 +26,19 @@ const ButtonStyled = styled.button`
 
   @media screen and (min-width: 425px){
     inline-size: max-content;
+    inline-size: ${props => props.large ? "100%" : "max-content"};
+
   }
 
   @media screen and (min-width: 768px){
+    inline-size: max-content;
   }
 `
 
-function Button({text, className, link, download}){
+function Button({text, className, link, download, large}){
   const component = link ? 'a' : 'button' 
   return(
-    <ButtonStyled className={className} as={component} href={link} link={link} download={download} >
+    <ButtonStyled className={className} as={component} href={link} link={link} download={download} target="_blank" rel="noreferrer" large={large}>
       {text}
     </ButtonStyled>
   )
