@@ -12,6 +12,8 @@ const ButtonStyled = styled.button`
   inline-size: 100%;
   text-decoration: none;
   transition: transform .2s;
+  box-sizing: border-box;
+  text-align: center;
 
   :active{
     transform: scale(.9);
