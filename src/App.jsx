@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import Experience from './components/Experience'
 import Header from './components/Header'
 import Projects from './components/Projects'
 
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Header />
       <Projects/>
+      <Experience />
     </div>
   )
 }
