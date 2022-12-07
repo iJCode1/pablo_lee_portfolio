@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --tertiary: #ef4565; 
     --blue: #094067; 
     --background-1: #d8eefe; 
-    --background-2: #242629; 
+    --background-2: #2426298f; 
     --background-button: #eaf0f3; 
     --button-background: #3da9fc; 
     --headline1: 700 4.5rem/5rem Inter; 
