@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
     --body2-bold: 700 0.875rem/1.6875rem Inter; 
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   body{
     margin: 0;
     color: var(--white);
