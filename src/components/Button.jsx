@@ -22,6 +22,7 @@ const ButtonStyled = styled.button`
 
   :hover{
     text-decoration: none;
+    opacity: .75;
   }
 
   @media screen and (min-width: 425px){
@@ -48,6 +49,11 @@ export const ButtonTransparent = styled(Button)`
   background: transparent;
   border: 2px solid var(--blue);
   color: var(--blue);
+
+  :hover{
+    border: 2px solid var(--primary);
+    opacity: .75;
+  }
 `
 
 export default Button
