@@ -47,7 +47,7 @@ const HeaderStyled = styled.main`
 
 function Header() {
   return (
-    <HeaderStyled>
+    <HeaderStyled id="hello">
       <img src={avatar} alt="Pablo lee's avatar" width="60" />
       <h1 className="title">Pablo Lee</h1>
       <p className="area">
