@@ -14,7 +14,7 @@ const AppStyled = styled.div`
     inset-block: ${props => props.navState ? "none" : "0"};
     inset-inline: ${props => props.navState ? "none" : "0"};
     background-color: ${props => props.navState ? "none" : "var(--background-2)"};
-    z-index: 3;
+    z-index: ${props => props.navState ? 0 : 3};
   }
 
   @media screen and (min-width: 768px){
