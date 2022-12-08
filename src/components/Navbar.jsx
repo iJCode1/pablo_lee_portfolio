@@ -37,6 +37,14 @@ const NavbarStyled = styled.nav`
     .link:active {
       transform: scale(0.9);
     }
+
+    .icon{
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+      display: inline-block;
+      transition: background-image .3s ease-in-out;
+      background-image: url(${props => props.navState ? menu : cancel });
+    }
   }
 
   .title {
@@ -119,12 +127,15 @@ function Navbar({ navState, setNavState }) {
             </a>
           </li>
           <li onClick={handleClick}>
-            <img
+            <span className="icon">
+
+            </span>
+            {/* <img
               className="icon"
               src={navState ? menu : cancel}
               alt="Icono de Menú"
               width="24"
-            />
+            /> */}
           </li>
         </ul>
 
