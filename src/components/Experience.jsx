@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import ExperienceProject from './ExperienceProject'
+import { motion } from 'framer-motion'
 
 const ExperienceStyled = styled.div`
   background-color: var(--blue);
@@ -7,6 +8,7 @@ const ExperienceStyled = styled.div`
   padding-inline: 1.375rem;
   box-sizing: border-box;
   padding-block: 5rem;
+  overflow-x: hidden;
 
   .experience{
     max-inline-size: 42rem;
@@ -52,7 +54,13 @@ const ExperienceStyled = styled.div`
 function Experience(){
   return(
     <ExperienceStyled id='experience'>
-      <div className="experience">
+      <motion.div 
+        className="experience"
+        initial={{ x: "100%" }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true }}
+      >
         <div className="concept">
           <h2 className='title'>Experiencia</h2>
           <p className="paragraph">Tengo más de 3 años de experiencia en Frontend.</p>
@@ -69,8 +77,8 @@ function Experience(){
         title="Netnet"
         charge="Frontend - 2022"
         description="Netnet es una de las plataformas de entretenimiento con más ranking a nivel mundial y detrás de las películas y series que nos ofrece, hay un diseño con el que está estructurada y organizada cada sección de la plataforma."/>
-      </div>
-    </ExperienceStyled>  
+      </motion.div>
+    </ExperienceStyled>
   )
 }
 

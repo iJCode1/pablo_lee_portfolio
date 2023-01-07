@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Button, { ButtonTransparent } from './Button'
 import b_netnet from '../assets/images/img-1.png'
+import { motion } from 'framer-motion'
 
 const ProjectStyled = styled.div`
   margin: 0;
@@ -91,19 +92,26 @@ const ProjectStyled = styled.div`
 
 function Project({background, image, title, description, code, project}){
   return (
-    <ProjectStyled background={background}>
-      <div className="image-container">
-        <img src={image} alt={`${title} image`} width="220"/>
-      </div>
-      <div className="content">
-        <h2 className='title'>{title}</h2>
-        <p className='description'>{description}</p>
-        <div className="buttons">
-          <Button text="Ver proyecto" link={project} large="large"/>
-          <ButtonTransparent text="Ver código" link={code} large="large"/>
+    <motion.div
+      initial={{ y: 100 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: .5, ease: 'easeInOut' }}
+    >
+      <ProjectStyled background={background}>
+        <div className="image-container">
+          <img src={image} alt={`${title} image`} width="220"/>
         </div>
-      </div>
-    </ProjectStyled>
+        <div className="content">
+          <h2 className='title'>{title}</h2>
+          <p className='description'>{description}</p>
+          <div className="buttons">
+            <Button text="Ver proyecto" link={project} large="large"/>
+            <ButtonTransparent text="Ver código" link={code} large="large"/>
+          </div>
+        </div>
+      </ProjectStyled>
+    </motion.div>
   )
 }
 
